@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.carousel-size {
+  height: 33%;
+  width:  auto;
+  margin-left: 19%;
+  margin-right: 19%;
+}

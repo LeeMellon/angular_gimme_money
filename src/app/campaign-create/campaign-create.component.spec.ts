@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgbdCarouselBasic } from './carousel.component';
+import { CampaignCreateComponent } from './campaign-create.component';
 
-describe('NgbdCarouselBasic', () => {
-  let component: NgbdCarouselBasic;
-  let fixture: ComponentFixture<NgbdCarouselBasic>;
+describe('CampaignCreateComponent', () => {
+  let component: CampaignCreateComponent;
+  let fixture: ComponentFixture<CampaignCreateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgbdCarouselBasic ]
+      declarations: [ CampaignCreateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgbdCarouselBasic);
+    fixture = TestBed.createComponent(CampaignCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

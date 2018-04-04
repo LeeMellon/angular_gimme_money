@@ -1,0 +1,28 @@
+{
+    "campaigns": [
+        {
+            "title": "Test Campaign",
+            "total": 4000,
+            "tagline": " ",
+            "image": " ",
+            "location": " ",
+            "category": " ",
+            "tags": [" "],
+            "duration": "December 17, 1995 03:24:00",
+            "story": " ",
+            "perks": " "
+        },
+        {
+            "title": "Test Campaign",
+            "total": 4000,
+            "tagline": " ",
+            "image": " ",
+            "location": " ",
+            "category": " ",
+            "tags": [" "],
+            "duration": "December 17, 1995 03:24:00",
+            "story": " ",
+            "perks": " "
+        }
+    ]
+}
