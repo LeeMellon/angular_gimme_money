@@ -6,6 +6,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 export class FirebaseService {
 
+campaignToDisplay = null;
 campaigns: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
     this.campaigns = database.list('campaigns');

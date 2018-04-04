@@ -4,6 +4,7 @@ import { Campaign } from '../models/campaign.model';
 import { FirebaseService } from '../services/firebase.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-campaign-detail',
@@ -13,18 +14,18 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CampaignDetailComponent implements OnInit {
   campaignKey: string;
-  campaignToDisplay: Campaign;
 
-  constructor(private route: ActivatedRoute, private location: Location, private firebaseService: FirebaseService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private firebaseService: FirebaseService, private router: Router,) { }
 
   ngOnInit() {
+    let campaignToDisplay = this.firebaseService.campaignToDisplay;
     this.route.params.forEach((urlParameters)=>{
       this.campaignKey = urlParameters['id'];
     });
 
     this.firebaseService.getCampaignByKey(this.campaignKey).subscribe(campaign =>{
       console.log(campaign.title)
-      this.campaignToDisplay = new Campaign(
+      firebaseService.campaignToDisplay = new Campaign(
         campaign.title,
         campaign.total,
         campaign.tagline,
@@ -36,8 +37,12 @@ export class CampaignDetailComponent implements OnInit {
         campaign.story,
         campaign.perk
       );
-      console.log(this.campaignToDisplay)
+      console.log(firebaseService.campaignToDisplay)
     })
+  }
+
+  clickToEdit(campaignToDisplay){
+    this.router.navigate(['edit', this.campaignKey]);
   }
 
 }

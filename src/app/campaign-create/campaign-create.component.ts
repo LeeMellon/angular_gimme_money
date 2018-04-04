@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Campaign } from '../models/campaign.model';
 import { FirebaseService } from '../services/firebase.service';
-
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
