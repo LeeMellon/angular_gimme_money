@@ -23,7 +23,8 @@ export class FrontPageComponent implements OnInit {
   }
 
   goToDetailsPage(clickedCampaign){
-    this.router.navigate(['campaigns', clickedCampaign.$key]);
+    console.log("here")
+    this.router.navigate(['detail', clickedCampaign.$key]);
   }
 
 }

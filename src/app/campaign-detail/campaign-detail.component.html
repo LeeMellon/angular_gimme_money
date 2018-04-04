@@ -1,18 +1,19 @@
 <div>
+
   <h3>{{campaignToDisplay?.title}}</h3>
-  <h4>{{campaignToDisplay?.number}}</h4>
-  <h5 *ngIf="campaignToDisplay?.tagline"></h5>
-  <h5>{{campaignToDisplay?.tagline}}</h5>
-  <h5 *ngIf="campaignToDisplay?.story"></h5>
-  <h5>{{campaignToDisplay?.story}}</h5>
-  <h5 *ngIf="campaignToDisplay?.image"></h5>
-  <h5>{{campaignToDisplay?.image}}</h5>
-  <h5 *ngIf="campaignToDisplay?.category"></h5>
-  <h5>{{campaignToDisplay?.category}}</h5>
-  <h5 *ngIf="campaignToDisplay?.location"></h5>
-  <h5>{{campaignToDisplay?.location}}</h5>
-  <h5 *ngIf="campaignToDisplay?.tags"></h5>
-  <h5>{{campaignToDisplay?.tags}}</h5>
-  <h5 *ngIf="campaignToDisplay?.perks"></h5>
-  <h5>{{campaignToDisplay?.perks}}</h5>
+  <h4>{{campaignToDisplay?.total}}</h4>
+
+  <h5 *ngIf="campaignToDisplay?.tagline">{{campaignToDisplay?.tagline}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.story">{{campaignToDisplay?.story}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.image">{{campaignToDisplay?.image}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.category">{{campaignToDisplay?.category}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.location">{{campaignToDisplay?.location}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.tags">{{campaignToDisplay?.tags}}</h5>
+
+  <h5 *ngIf="campaignToDisplay?.perks">{{campaignToDisplay?.perks}}</h5>
 </div>

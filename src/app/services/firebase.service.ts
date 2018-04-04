@@ -21,7 +21,7 @@ addCampaign(newCampaign: Campaign){
 }
 
 getCampaignByKey(key: string){
-  return this.database.object('campaign/' + key);
+  return this.database.object('campaigns/' + key);
 }
 
 

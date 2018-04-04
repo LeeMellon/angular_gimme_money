@@ -16,11 +16,11 @@ const appRoutes: Routes = [
     component: CampaignCreateComponent
   },
   {
-    path: 'edit:key',
+    path: 'edit/:id',
     component: CampaignEditComponent
   },
   {
-    path: 'detail',
+    path: 'detail/:id',
     component: CampaignDetailComponent
   }
 

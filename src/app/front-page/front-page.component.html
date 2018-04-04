@@ -10,7 +10,9 @@
 
 <div class="wrapper" >
     <div class="campaign-card" *ngFor="let campaign of campaigns | async; let i = index" >
-        <h2>{{campaign.title}}</h2>
+      <div class="card-body">
+        <h2 (click)="goToDetailsPage(campaign)">{{campaign.title}}</h2>
         <h3>{{campaign.total}}</h3>
+      </div>
     </div>
 </div>
