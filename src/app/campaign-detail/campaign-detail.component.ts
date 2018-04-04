@@ -14,18 +14,18 @@ import { Router } from '@angular/router';
 })
 export class CampaignDetailComponent implements OnInit {
   campaignKey: string;
+  campaignToDisplay: Campaign;
 
   constructor(private route: ActivatedRoute, private location: Location, private firebaseService: FirebaseService, private router: Router,) { }
 
   ngOnInit() {
-    let campaignToDisplay = this.firebaseService.campaignToDisplay;
     this.route.params.forEach((urlParameters)=>{
       this.campaignKey = urlParameters['id'];
     });
 
     this.firebaseService.getCampaignByKey(this.campaignKey).subscribe(campaign =>{
       console.log(campaign.title)
-      firebaseService.campaignToDisplay = new Campaign(
+      this.campaignToDisplay = new Campaign(
         campaign.title,
         campaign.total,
         campaign.tagline,
@@ -37,7 +37,7 @@ export class CampaignDetailComponent implements OnInit {
         campaign.story,
         campaign.perk
       );
-      console.log(firebaseService.campaignToDisplay)
+      console.log(this.campaignToDisplay)
     })
   }
 

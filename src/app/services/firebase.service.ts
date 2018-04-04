@@ -26,6 +26,7 @@ getCampaignByKey(key: string){
 }
 
 
+
 updateCampaign(localUpdatedCampaign){
   var campaignInFirebase = this.getCampaignByKey(localUpdatedCampaign.$key);
   campaignInFirebase.update(
