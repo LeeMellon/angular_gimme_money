@@ -2,7 +2,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { CampaignCreateComponent } from './campaign-create/campaign-create.component';
-
+import { CampaignEditComponent } from './campaign-edit/campaign-edit.component';
+import { CampaignDetailComponent } from './campaign-detail/campaign-detail.component';
 
 
 const appRoutes: Routes = [
@@ -14,10 +15,14 @@ const appRoutes: Routes = [
     path: 'create-campaign',
     component: CampaignCreateComponent
   },
-  // {
-  //   path: 'about',
-  //   component:
-  // }
+  {
+    path: 'edit:key',
+    component: CampaignEditComponent
+  },
+  {
+    path: 'detail',
+    component: CampaignDetailComponent
+  }
 
 ];
 

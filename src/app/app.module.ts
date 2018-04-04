@@ -14,6 +14,7 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { CampaignEditComponent } from './campaign-edit/campaign-edit.component';
 
 
 export const firebaseConfig = {
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     CampaignDetailComponent,
     FooterComponent,
     NgbdCarouselBasic,
-    CampaignCreateComponent
+    CampaignCreateComponent,
+    CampaignEditComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,9 @@ export const firebaseConfig = {
     NgbModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

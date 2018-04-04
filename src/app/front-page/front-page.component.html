@@ -1,1 +1,16 @@
 <ngbd-carousel-basic></ngbd-carousel-basic>
+<!-- <div class="list-container">
+  <div *ngFor="let campaign of campaigns | async">
+    <div class="campaign-card">
+      <h2>{{campaign.title}}</h2>
+      <h3>{{campaign.total}}</h3>
+    </div>
+  </div>
+</div> -->
+
+<div class="wrapper" >
+    <div class="campaign-card" *ngFor="let campaign of campaigns | async; let i = index" >
+        <h2>{{campaign.title}}</h2>
+        <h3>{{campaign.total}}</h3>
+    </div>
+</div>

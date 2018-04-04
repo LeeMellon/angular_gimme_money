@@ -2,6 +2,7 @@
 .carousel-size {
   height: 33%;
   width:  auto;
-  margin-left: 19%;
-  margin-right: 19%;
+
+  background-size: cover;
+  background-color: #333;
 }

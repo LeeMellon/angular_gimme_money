@@ -1,0 +1,14 @@
+.campaign-card {
+  margin-left: 50%;
+  background-color: #afafaf;
+}
+
+.wrapper {
+    /*margin-left: 1em;
+    margin-right: 1em;*/
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 30em [col-start]) 5%;
+    grid-row-gap: 1em;
+    grid-column-gap: .5em;
+}

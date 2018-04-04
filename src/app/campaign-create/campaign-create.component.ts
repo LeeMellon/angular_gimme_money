@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Campaign } from '../models/campaign.model';
+import { FirebaseService } from '../services/firebase.service';
+
+
 
 @Component({
   selector: 'app-campaign-create',
   templateUrl: './campaign-create.component.html',
-  styleUrls: ['./campaign-create.component.css']
+  styleUrls: ['./campaign-create.component.css'],
+  providers: [ FirebaseService ]
 })
-export class CampaignCreateComponent implements OnInit {
+export class CampaignCreateComponent {
 
-  constructor() { }
+  constructor(private firebaseService: FirebaseService) { }
 
-  ngOnInit() {
+  submitForm(title: string, total: number){
+    let newCampaign: Campaign = new Campaign(title, total);
+    this.firebaseService.addCampaign(newCampaign);
   }
+
 
 }

@@ -1,0 +1,37 @@
+<h4>Edit Campaign</h4>
+
+<label>New Campaign Title:</label>
+<input [(ngModel)]="selectedCampaign.title">
+<br>
+
+<label>New Campaign Total:</label>
+<input [(ngModel)]="selectedCampaign.total">
+<br>
+
+<label>New Campaign Image:</label>
+<input [(ngModel)]="selectedCampaign.image">
+<br>
+
+<label>New Campaign Location:</label>
+<input [(ngModel)]="selectedCampaign.location">
+<br>
+
+<label>New Campaign Category:</label>
+<input [(ngModel)]="selectedCampaign.category">
+<br>
+
+<label>New Campaign Tags:</label>
+<input [(ngModel)]="selectedCampaign.tags">
+<br>
+
+<label>New Campaign Story:</label>
+<input [(ngModel)]="selectedCampaign.story">
+<br>
+
+<label>New Campaign Perks:</label>
+<input [(ngModel)]="selectedCampaign.perks">
+<br>
+
+<button (click)="beginUpdatingCampaign(selectedCampaign)">Update</button>
+<hr>
+<button (click)="beginDeletingCampaign(selectedCampaign)">Delete</button>
