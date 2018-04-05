@@ -1,13 +1,34 @@
-<div>
+<div class="campaign-container">
+<button *ngIf="user" (click)="clickToEdit()">Edit</button>
+<div class="row ">
+  <div class="col-md-6 campaign-top">
+    <div  *ngIf="campaignToDisplay?.image"><img class="campaign-img" src={{campaignToDisplay?.image}} alt=""></div>
+  </div>
+  <div class="col-md-6 campaign-top">
+    <h3>{{campaignToDisplay?.title}}</h3>
+    <h5 *ngIf="campaignToDisplay?.tagline">{{campaignToDisplay?.tagline}}</h5>
+    <h4>{{campaignToDisplay?.total}}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 campaign-bottom">
+    <h5 *ngIf="campaignToDisplay?.story">{{campaignToDisplay?.story}}</h5>
+  </div>
+  <div class="col-md-6 campaign-bottom">
+    <h5 *ngIf="campaignToDisplay?.perks">{{campaignToDisplay?.perks}}</h5>
+  </div>
+</div>
 
-  <h3>{{campaignToDisplay?.title}}</h3>
-  <h4>{{campaignToDisplay?.total}}</h4>
 
-  <h5 *ngIf="campaignToDisplay?.tagline">{{campaignToDisplay?.tagline}}</h5>
 
-  <h5 *ngIf="campaignToDisplay?.story">{{campaignToDisplay?.story}}</h5>
 
-  <h5 *ngIf="campaignToDisplay?.image">{{campaignToDisplay?.image}}</h5>
+
+
+
+
+
+
+
 
   <h5 *ngIf="campaignToDisplay?.category">{{campaignToDisplay?.category}}</h5>
 
@@ -15,7 +36,6 @@
 
   <h5 *ngIf="campaignToDisplay?.tags">{{campaignToDisplay?.tags}}</h5>
 
-  <h5 *ngIf="campaignToDisplay?.perks">{{campaignToDisplay?.perks}}</h5>
+
 
 </div>
-<button *ngIf="user" (click)="clickToEdit()">Edit</button>

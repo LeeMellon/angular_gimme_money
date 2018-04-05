@@ -7,12 +7,15 @@
     </div>
   </div>
 </div> -->
-
-<div class="wrapper" >
-    <div class="campaign-card" *ngFor="let campaign of campaigns | async; let i = index" >
+<div class="wrapper">
+  <div class="content-grid" >
+    <div class="campaign-card" *ngFor="let campaign of campaigns| async; let i = index" >
       <div class="card-body">
         <h2 (click)="goToDetailsPage(campaign)">{{campaign.title}}</h2>
-        <h3>{{campaign.total}}</h3>
+        <h3>{{campaign.current}}/{{campaign.total}}</h3>
+        <img src={{campaign.image}} alt="{{campaign.title}} splash Image">
+        <h4>{{campaign.tagline}}</h4>
       </div>
     </div>
+  </div>
 </div>

@@ -32,11 +32,12 @@ updateCampaign(localUpdatedCampaign){
   campaignInFirebase.update(
     {title: localUpdatedCampaign.title,
     total: localUpdatedCampaign.total,
+    current: localUpdatedCampaign.current,
     tagline: localUpdatedCampaign.tagline,
     image:  localUpdatedCampaign.image,
     location: localUpdatedCampaign.location,
     category: localUpdatedCampaign.category,
-    tags: localUpdatedCampaign.tags,
+    // tags: localUpdatedCampaign.tags,
     story: localUpdatedCampaign.story,
     perks:  localUpdatedCampaign.perks})
 }

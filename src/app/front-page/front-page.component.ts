@@ -17,9 +17,9 @@ export class FrontPageComponent implements OnInit {
   constructor(private router: Router, private firebaseService: FirebaseService) { }
   currentRoute: string = this.router.url;
   campaigns: FirebaseListObservable<any[]>;
-
   ngOnInit() {
     this.campaigns = this.firebaseService.getCampaigns();
+    
   }
 
   goToDetailsPage(clickedCampaign){

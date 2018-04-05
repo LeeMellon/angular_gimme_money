@@ -1,0 +1,19 @@
+.campaign-container{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.campaign-top {
+  border: solid red 2px;
+  height: 30vh;
+}
+
+.campaign-bottom {
+  border: solid red 2px;
+  height: 100vh;
+}
+
+.campaign-img {
+  height: 30vh;
+  max-width: 90%;
+}

@@ -2,22 +2,28 @@
   <ngb-carousel *ngIf="images" class="carousel-size">
     <ng-template ngbSlide >
       <div class="carousel-img" [ngStyle]="{'background-image': returnImgZero(), '-webkit-background-size': 'cover', 'background-repeat': 'no-repeat' }">
-        <h3 >First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
       </div>
       <!-- </div> -->
     </ng-template>
     <ng-template ngbSlide >
       <div class="carousel-img" [ngStyle]="{'background-image': returnImgOne(), '-webkit-background-size': 'cover', 'background-repeat': 'no-repeat' }">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
       </div>
       <!-- </div> -->
     </ng-template>
     <ng-template ngbSlide >
       <div class="carousel-img" [ngStyle]="{'background-image': returnImgTwo(), '-webkit-background-size': 'cover', 'background-repeat': 'no-repeat' }">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
       </div>
     </ng-template>
   </ngb-carousel>
