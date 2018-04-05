@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
+import { Campaign } from '../models/campaign.model';
 import { FirebaseService } from '../services/firebase.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,11 +14,22 @@ import { FirebaseService } from '../services/firebase.service';
   providers: [FirebaseService]
 })
 export class CampaignEditComponent implements OnInit {
-  @Input() selectedCampaign;
-  constructor(private firebaseService: FirebaseService) { }
+  campaignKey: string;
+  campaignToEdit: Campaign;
+
+  constructor(private route: ActivatedRoute, private location: Location, private firebaseService: FirebaseService, private router: Router,) { }
 
   ngOnInit() {
-  }
+    this.route.params.forEach((urlParameters)=>{
+      this.campaignKey = urlParameters['id'];
+    });
+
+    this.firebaseService.getCampaignByKey(this.campaignKey).subscribe(dataLastEmittedFromObserver => {
+          this.campaignToEdit = dataLastEmittedFromObserver;
+
+   console.log(this.campaignToEdit);
+ })
+}
 
   beginUpdatingCampaign(campaignToUpdate){
     this.firebaseService.updateCampaign(campaignToUpdate)

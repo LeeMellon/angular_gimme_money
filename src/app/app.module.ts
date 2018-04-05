@@ -12,9 +12,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CampaignCreateComponent } from './campaign-create/campaign-create.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule,  } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { CampaignEditComponent } from './campaign-edit/campaign-edit.component';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthGuardService } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
 
 
 export const firebaseConfig = {
@@ -43,9 +46,10 @@ export const firebaseConfig = {
     ReactiveFormsModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, AuthGuardService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

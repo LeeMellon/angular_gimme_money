@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 .carousel-size {
-  height: 33%;
+  height: 33vh;
   width:  auto;
+  background-color: #999;
+}
 
-  background-size: cover;
-  background-color: #333;
+.carousel-img-size {
+
+
+}
+
+.carousel-img {
+  height: 33vh;
 }

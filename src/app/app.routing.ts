@@ -4,6 +4,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { CampaignCreateComponent } from './campaign-create/campaign-create.component';
 import { CampaignEditComponent } from './campaign-edit/campaign-edit.component';
 import { CampaignDetailComponent } from './campaign-detail/campaign-detail.component';
+import { AuthGuardService } from './auth-guard.service'
 
 
 const appRoutes: Routes = [
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'edit/:id',
-    component: CampaignEditComponent
+    component: CampaignEditComponent, canActivate: [AuthGuardService]
   },
   {
     path: 'detail/:id',

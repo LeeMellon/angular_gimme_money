@@ -1,4 +1,4 @@
-<div><a (click)="clickToEdit()">
+<div>
 
   <h3>{{campaignToDisplay?.title}}</h3>
   <h4>{{campaignToDisplay?.total}}</h4>
@@ -16,4 +16,6 @@
   <h5 *ngIf="campaignToDisplay?.tags">{{campaignToDisplay?.tags}}</h5>
 
   <h5 *ngIf="campaignToDisplay?.perks">{{campaignToDisplay?.perks}}</h5>
-</a></div>
+
+</div>
+<button *ngIf="user" (click)="clickToEdit()">Edit</button>

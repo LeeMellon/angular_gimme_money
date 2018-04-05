@@ -1,37 +1,37 @@
-<h4>Edit Campaign</h4>
+<h4>Edit {{campaignToEdit.total}}</h4>
 
 <label>New Campaign Title:</label>
-<input [(ngModel)]="selectedCampaign.title">
+<input [(ngModel)]="campaignToEdit.title">
 <br>
 
 <label>New Campaign Total:</label>
-<input [(ngModel)]="selectedCampaign.total">
+<input [(ngModel)]="campaignToEdit.total">
 <br>
 
 <label>New Campaign Image:</label>
-<input [(ngModel)]="selectedCampaign.image">
+<input [(ngModel)]="campaignToEdit.image">
 <br>
 
 <label>New Campaign Location:</label>
-<input [(ngModel)]="selectedCampaign.location">
+<input [(ngModel)]="campaignToEdit.location">
 <br>
 
 <label>New Campaign Category:</label>
-<input [(ngModel)]="selectedCampaign.category">
+<input [(ngModel)]="campaignToEdit.category">
 <br>
 
 <label>New Campaign Tags:</label>
-<input [(ngModel)]="selectedCampaign.tags">
+<input [(ngModel)]="campaignToEdit.tags">
 <br>
 
 <label>New Campaign Story:</label>
-<input [(ngModel)]="selectedCampaign.story">
+<input [(ngModel)]="campaignToEdit.story">
 <br>
 
 <label>New Campaign Perks:</label>
-<input [(ngModel)]="selectedCampaign.perks">
+<input [(ngModel)]="campaignToEdit.perks">
 <br>
 
-<button (click)="beginUpdatingCampaign(selectedCampaign)">Update</button>
+<button (click)="beginUpdatingCampaign(campaignToEdit)">Update</button>
 <hr>
-<button (click)="beginDeletingCampaign(selectedCampaign)">Delete</button>
+<button (click)="beginDeletingCampaign(campaignToEdit)">Delete</button>

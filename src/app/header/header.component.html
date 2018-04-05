@@ -6,8 +6,12 @@
     <li>About</li>
     <li>🔍</li>
     <li><a routerLink="create-campaign">Start a campaign</a></li>
-    <li>Login</li>
+    <li *ngIf="user">
+      <a>{{user.displayName}}</a>
+      <a (click)="logout()">Log out</a>
+    </li>
+    <li *ngIf ="!user">
+      <a (click)="login()">Log in</a>
     <li>Sign Up</li>
-    <li><a routerLink="edit:id">Edit</a></li>
   </ul>
 </div>
