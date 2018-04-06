@@ -19,3 +19,8 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.front-page-img {
+  height: 30vh;
+  max-width: 90%;
+}
