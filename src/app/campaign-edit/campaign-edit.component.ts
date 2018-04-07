@@ -3,8 +3,7 @@ import { Location } from '@angular/common';
 import { Campaign } from '../models/campaign.model';
 import { FirebaseService } from '../services/firebase.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 
 @Component({
